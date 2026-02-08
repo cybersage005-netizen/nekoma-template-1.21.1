@@ -152,7 +152,7 @@ public class ItemRegistry {
                 RegistryKey.of(RegistryKeys.ITEM, EntityType.getId(type).withSuffixedPath("_spawn_egg")), SpawnEggItem::new, new Item.Settings().spawnEgg(type)
         );
     }
-    private static Item registerTrim(String id, String nameOfTrim) {
+    private static Item registerTrim(String id, String assetId) {
 
         return Registry.register(
                 Registries.ITEM,
@@ -160,8 +160,9 @@ public class ItemRegistry {
                 new SmithingTemplateItem(
                         Text.translatable("item.minecraft.smithing_template.armor_trim.applies_to"),
                         Text.translatable("item.minecraft.smithing_template.armor_trim.ingredients"),
-                        Text.translatable("trim_pattern.nekomasfixed." + nameOfTrim),
-                        Text.translatable("trim_pattern.nekomasfixed." + nameOfTrim + ".description"),
+                        Text.translatable("trim_pattern.nekomasfixed." + assetId + ".title"),
+                        Text.translatable("trim_pattern.nekomasfixed." + assetId + ".description"),
+
                         List.of(
                                 Identifier.of("minecraft", "item/empty_armor_slot_helmet"),
                                 Identifier.of("minecraft", "item/empty_armor_slot_chestplate"),

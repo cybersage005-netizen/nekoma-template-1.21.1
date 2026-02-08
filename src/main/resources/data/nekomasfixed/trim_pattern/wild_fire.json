@@ -1,6 +1,15 @@
 {
-  "asset_id": "wild_fire",
-  "description": {
-    "translate": "trim_pattern.nekomasfixed.wild_fire.description"
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "nekomasfixed:wild_fire_smithing_template"
+  },
+  "base": {
+    "tag": "minecraft:trimmable_armor"
+  },
+  "addition": {
+    "tag": "minecraft:trim_materials"
+  },
+  "result": {
+    "id": "minecraft:air"
   }
 }

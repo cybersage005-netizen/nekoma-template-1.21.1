@@ -95,10 +95,9 @@ public class ItemRegistry {
     /*Added By CyberModder
     1. Wild Fire Smithing Template added
      */
-    public static final Item WILD_FIRE_SMITHING_TEMPLATE = Registry.register(
-            Registries.ITEM,
-            Identifier.of("nekomasfixed", "wild_fire_smithing_template"),
-            new SmithingTemplateItem(
+    public static final Item WILD_FIRE_SMITHING_TEMPLATE = register(
+            "wild_fire_smithing_template",
+            settings -> new SmithingTemplateItem(
                     Text.translatable("item.minecraft.smithing_template.armor_trim.applies_to"),
                     Text.translatable("item.minecraft.smithing_template.armor_trim.ingredients"),
                     Text.translatable("trim_pattern.nekomasfixed.wild_fire.title"),
@@ -112,9 +111,11 @@ public class ItemRegistry {
                     List.of(
                             Identifier.of("minecraft", "item/empty_slot_ingot")
                     ),
-                    new Item.Settings().maxCount(64)
-            )
+                    settings
+            ),
+            new Item.Settings().maxCount(64)
     );
+
 
 
     public static final Item TARGET_DUMMY = register("target_dummy", TargetDummyItem::new, new Item.Settings().maxCount(1));

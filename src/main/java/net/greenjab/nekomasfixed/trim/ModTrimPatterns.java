@@ -26,11 +26,15 @@ public class ModTrimPatterns {
     }
 
     private static void register(Registerable<ArmorTrimPattern> registry, @UnknownNullability RegistryKey<ArmorTrimPattern> key) {
-        ArmorTrimPattern armorTrimPattern = new ArmorTrimPattern(key.getValue(), Text.translatable(Util.createTranslationKey("trim_pattern", key.getValue())), false);
+        ArmorTrimPattern armorTrimPattern = new ArmorTrimPattern(getId((key)), Text.translatable(Util.createTranslationKey("trim_pattern", key.getValue())), false);
         registry.register(key, armorTrimPattern);
     }
 
     private static RegistryKey<ArmorTrimPattern> of(String id) {
         return RegistryKey.of(RegistryKeys.TRIM_PATTERN, Identifier.of("nekomasfixed", id));
+    }
+
+    public static Identifier getId(RegistryKey<ArmorTrimPattern> key) {
+        return key.getValue();
     }
 }

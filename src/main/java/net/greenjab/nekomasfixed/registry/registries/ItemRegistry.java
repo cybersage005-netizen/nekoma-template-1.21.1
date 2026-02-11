@@ -113,7 +113,7 @@ public class ItemRegistry {
                     ),
                     settings
             ),
-            new Item.Settings()
+            new Item.Settings().rarity(Rarity.RARE)
     );
 
 

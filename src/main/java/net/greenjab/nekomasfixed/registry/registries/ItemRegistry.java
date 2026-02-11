@@ -100,8 +100,8 @@ public class ItemRegistry {
             settings -> new SmithingTemplateItem(
                     Text.translatable("item.minecraft.smithing_template.armor_trim.applies_to"),
                     Text.translatable("item.minecraft.smithing_template.armor_trim.ingredients"),
-                    Text.translatable("trim_pattern.nekomasfixed.wild_fire.title"),
-                    Text.translatable("trim_pattern.nekomasfixed.wild_fire.description"),
+                    Text.translatable("trim_pattern.nekomasfixed.wild_fire_trim.title"),
+                    Text.translatable("trim_pattern.nekomasfixed.wild_fire_trim.description"),
                     List.of(
                             Identifier.of("minecraft", "item/empty_armor_slot_helmet"),
                             Identifier.of("minecraft", "item/empty_armor_slot_chestplate"),
@@ -113,7 +113,7 @@ public class ItemRegistry {
                     ),
                     settings
             ),
-            new Item.Settings().maxCount(64)
+            new Item.Settings().maxCount(1)
     );
 
 
